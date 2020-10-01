@@ -25,6 +25,15 @@ ul {
 }
 /* 1.1. Хедер */
 
+/* Стили контейнера */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Стили логотипа */
 .logo {
   color: var(--accent-color);
@@ -49,7 +58,23 @@ ul {
 .header {
   background-color: var(--white-color);
 }
-.site-nav .link {
+.container-header {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: inline-flex;
+  margin: 0px;
+  margin-left: 92px;
+}
+.site-nav .site-item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav .site-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-title);
   font-weight: 500;
   font-size: 14px;
@@ -57,12 +82,20 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link.current {
+.site-nav .site-link:hover,
+.site-nav .site-link:focus,
+.site-nav .site-link.current {
   color: var(--accent-color);
 }
+
 .auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav .auth-item:not(:last-child) {
+  margin-right: 50px;
+}
+.auth-link {
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -70,8 +103,8 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.auth-nav:hover,
-.auth-nav:focus {
+.auth-link:hover,
+.auth-link:focus {
   color: var(--accent-color);
 }
 /* 1.2. Главная секция */
@@ -86,6 +119,7 @@ ul {
   letter-spacing: 0.06em;
   text-align: center;
   text-decoration: none;
+  margin: 0px;
 }
 
 .hero-button {
@@ -158,10 +192,15 @@ ul {
   letter-spacing: 0.03em;
 }
 /* 1.6. Подвал */
+.container-logo {
+  padding-top: 60px;
+}
 .footer {
   background-color: var(--bcg-color-1);
 }
 .addres {
+  margin-top: 20px;
+
   color: var(--white-color);
   font-weight: 400;
   font-size: 14px;
@@ -170,12 +209,18 @@ ul {
   font-style: normal;
 }
 .addres-link {
+  display: block;
+  margin-top: 9px;
+
   color: var(--mail-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+.addres-link:last-child {
+  padding-bottom: 60px;
 }
 .addres-link:hover,
 .addres-link:focus {
