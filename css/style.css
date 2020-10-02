@@ -286,21 +286,15 @@ img {
 .project {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-left: 0px;
 }
-.project .item {
-  width: 370px;
-  margin-right: 30px;
-}
-/* Я не знаю, почему эта дичь неработает */
-.project .item:ntn-child(3n) {
-  margin-right: 0px;
-}
-.project .item:ntn-last-child(-n + 3) {
+.container-project {
   margin-bottom: 94px;
 }
-/* Я не знаю, почему эта дичь неработает */
-
+.project .item {
+  width: calc((100% - 30px * 2) / 3);
+}
 .project-title {
   color: var(--primary-text-title);
   font-weight: 700;
