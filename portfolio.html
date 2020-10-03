@@ -18,8 +18,8 @@
     <!-- 1.1. Хедер -->
     <header class="header">
       <div class="container container-header">
-        <a href="" class="logo logo-1"><span class="logo">Web</span>Studio</a>
         <nav>
+          <a href="" class="logo logo-1"><span class="logo">Web</span>Studio</a>
           <ul class="site-nav">
             <li class="site-item">
               <a href="./index.html" class="site-link">Студия</a>
@@ -43,20 +43,32 @@
       </div>
     </header>
     <main>
-      <div class="container">
+      <section class="container-filter">
         <!-- 2.1. Фильтр-->
-        <ul class="container-filter">
-          <li class="item"><a href="" class="button">Все</a></li>
-          <li class="item"><a href="" class="button">Веб-сайты</a></li>
-          <li class="item"><a href="" class="button">Приложения</a></li>
-          <li class="item"><a href="" class="button">Дизайн</a></li>
-          <li class="item"><a href="" class="button">Маркетинг</a></li>
-        </ul>
-      </div>
+        <nav class="container">
+          <ul class="filter-list">
+            <li class="item">
+              <button>Все</button>
+            </li>
+            <li class="item">
+              <button>Веб-сайты</button>
+            </li>
+            <li class="item">
+              <button>Приложения</button>
+            </li>
+            <li class="item">
+              <button>Дизайн</button>
+            </li>
+            <li class="item">
+              <button>Маркетинг</button>
+            </li>
+          </ul>
+        </nav>
+      </section>
       <!--портфолио проектов-->
       <!-- <h1>Портфолио проектов</h1> -->
-      <section>
-        <div class="container container-project">
+      <section class="container-project">
+        <div class="container">
           <ul class="project">
             <li class="item">
               <img
@@ -173,11 +185,7 @@
     <!-- 1.5. Подвал -->
     <footer class="footer">
       <div class="container">
-        <div class="container-logo">
-          <a href="" class="logo logo-2">
-            <span class="logo">Web</span>Studio
-          </a>
-        </div>
+        <a href="" class="logo logo-2"> <span class="logo">Web</span>Studio </a>
         <address class="addres">
           г. Киев, пр-т Леси Украинки, 26<br />
           <a href="mailto:info@devstudio.com" class="addres-link"

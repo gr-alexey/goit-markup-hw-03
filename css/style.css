@@ -66,6 +66,7 @@ ul {
   display: inline-flex;
   margin: 0px;
   margin-left: 92px;
+  padding-left: 0px;
 }
 .site-nav .site-item:not(:last-child) {
   margin-right: 50px;
@@ -90,7 +91,11 @@ ul {
 
 .auth-nav {
   display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: auto;
+
+  padding-left: 0px;
 }
 .auth-nav .auth-item:not(:last-child) {
   margin-right: 50px;
@@ -151,9 +156,12 @@ ul {
   color: var(--primary-text-title);
   margin: 0px;
 }
+.feature-container {
+  padding-top: 94px;
+}
 .feature-list {
   display: flex;
-  margin-top: 94px;
+  margin: 0px;
   padding: 0px;
 }
 
@@ -180,12 +188,15 @@ ul {
   margin: 0px;
 }
 /* 1.4. Секция портфолио */
+.portfolio-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .portfolio {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
-  margin-top: 94px;
   text-align: center;
 }
 .portolio-list {
@@ -193,7 +204,9 @@ ul {
   margin-top: 50px;
   margin-bottom: 0px;
   padding-left: 0px;
-  padding-bottom: 50px;
+}
+.portolio-list .item {
+  height: 294px;
 }
 .portolio-list .item:not(:last-child) {
   margin-right: 30px;
@@ -202,7 +215,9 @@ img {
   display: block;
 }
 /* 1.5. Секция наша команда */
-.team {
+.team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--bcg-color-3);
 }
 .team-list {
@@ -211,7 +226,6 @@ img {
   padding: 0px;
 }
 .team-title {
-  padding-top: 94px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -221,9 +235,6 @@ img {
 }
 .team-list .item:not(:last-child) {
   margin-right: 30px;
-}
-.team-box {
-  margin-bottom: 94px;
 }
 .team-staff {
   color: var(--primary-text-title);
@@ -241,14 +252,13 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
   text-align: center;
 }
 /* 1.6. Подвал */
-.container-logo {
-  padding-top: 60px;
-}
 .footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: var(--bcg-color-1);
 }
 .addres {
@@ -272,9 +282,6 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.addres-link:last-child {
-  padding-bottom: 60px;
-}
 .addres-link:hover,
 .addres-link:focus {
   color: var(--accent-color);
@@ -283,45 +290,15 @@ img {
 /* 2.1. Фильтр */
 
 /* 2.2. Портфолио проектов */
-.project {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-left: 0px;
-}
-.container-project {
-  margin-bottom: 94px;
-}
-.project .item {
-  width: calc((100% - 30px * 2) / 3);
-}
-.project-title {
-  color: var(--primary-text-title);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  padding-top: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 24px;
-}
-.project-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  margin-left: 24px;
-  margin-top: 4px;
-  margin-bottom: 0px;
-}
 .container-filter {
-  display: flex;
-  margin-top: 94px;
-  margin-bottom: 50px;
-  justify-content: center;
+  padding-top: 94px;
 }
-.container-filter .item:not(:last-child) {
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+.filter-list .item:not(:last-child) {
   margin-right: 8px;
 }
 .container-project .project {
@@ -331,11 +308,50 @@ img {
   display: flex;
 }
 .project-box {
+  padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+.container-project {
+  padding-top: 34px;
+  padding-bottom: 94px;
+}
+.project .item {
+  margin-right: 30px;
   margin-bottom: 30px;
 }
+.project .item:nth-child(3n) {
+  margin-right: 0px;
+}
+.project .item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.project-title {
+  color: var(--primary-text-title);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin: 0px;
+}
+.project-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  margin: 0px;
+}
+
 /* button */
-.container-filter .button {
+button {
+  border: transparent;
   background-color: var(--bcg-color-3);
   color: var(--primary-text-title);
   text-decoration: none;
@@ -345,13 +361,8 @@ img {
   padding-right: 22px;
   padding-left: 22px;
 }
-
-.button.primary {
-  background-color: var(--button-color);
-  color: var(--white-color);
-}
-.button:hover,
-.button:focus {
+button:hover,
+button:focus {
   background-color: var(--button-color);
   color: var(--white-color);
 }
